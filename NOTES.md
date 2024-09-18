@@ -39,9 +39,12 @@
 + Plugin is a collection of goals
 + Example: compiler plugin
 + Gals perform the actions in Maven builds
-+ All work is donw via plugins and goals
-+ Called indenpently or as part of a lifecycle phase
++ All work is done via plugins and goals
++ Called independently or as part of a lifecycle phase
 
+
+> mvn site
+> 
 #### Lifestyle and phases
 
 + lifecycle is a sequence of named phases
