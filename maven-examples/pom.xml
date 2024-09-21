@@ -9,4 +9,20 @@
         <artifactId>learning_apache_maven</artifactId>
         <version>1.0</version>
     </parent>
+    <profiles>
+        <profile>
+            <id>production</id>
+            <activation>
+                <property>
+                    <name>
+                        env.PACKAGE_ENV
+                    </name>
+                    <value>PROD</value>
+                </property>
+            </activation>
+            <build>
+                <directory>production</directory>
+            </build>
+        </profile>
+    </profiles>
 </project>

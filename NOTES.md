@@ -68,6 +68,14 @@
 /opt/homebrew/Cellar/maven/3.9.9/libexec/lib/maven-model-builder-3.9.9.jar/org/apache/maven/model/pom-4.0.0.xml
 
 
-> mvn help:effective-pom
+```bash
+mvn help:effective-pom
 
+mvn -DProduction package
+
+export PACKAGE_ENV=PROD
+
+mvn package
+
+```
 
