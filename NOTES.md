@@ -79,3 +79,17 @@ mvn package
 
 ```
 
+### archetype 
+
+```bash
+
+mvn archetype:generate
+
+```
+
+### change to eclipse project
+
+```bash
+mvn eclipse:eclipse
+
+```
