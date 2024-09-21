@@ -1,4 +1,4 @@
-package com.jack.maven;
+package com.yao.dep;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

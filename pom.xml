@@ -36,5 +36,17 @@
    <build>
        <sourceDirectory>src/nonstandard/java</sourceDirectory>
        <directory>myTarget</directory>
+       <pluginManagement>
+           <plugins>
+               <plugin>
+                   <artifactId>maven-compiler-plugin</artifactId>
+                   <groupId>org.apache.plugins</groupId>
+                   <version>3.2</version>
+                   <configuration>
+                       <verbose>true</verbose>
+                   </configuration>
+               </plugin>
+           </plugins>
+       </pluginManagement>
    </build>
 </project>
