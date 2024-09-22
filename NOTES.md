@@ -200,5 +200,104 @@ use plugin-prefix
 
 > mvn fCustom:touch
 
+## Core plugins
+
+
++ Learn how to use the most common Maven plugins
++ Understand the purpose of plugins
++ Reinforce plugin invocation and configuration
+
+> https://maven.apache.org/plugins/
+
+
+### clean
+
+> mvn clean
+> mvn clean:clean
+
+### jar
+
+
+> mvn package
+
+> mvn jar:jar
+
+> mvn jar:jar -Djar.finalName=test -Djar.forceCreation=true
+
+> https://maven.apache.org/plugins/maven-jar-plugin/plugin-info.html
+
+finalName is not working on the jar plugin anymore,
+but can be specified in the build secion of pom file
+
+```xml
+<build>
+    <finalName>WhatEverYouLike</finalName>
+</build>
+
+```
+
+> mvn clean package
+
+> brew install p7zip
+> 7z -l xxx.jar
+
+
+### javadoc
+
+
+```bash
+
+
+mvn javadoc:javadoc  -Dheader=MyJavaDoc -Dfooter=Copyleft
+mvn javadoc:javadoc 
+mvn javadoc:jar
+mvn javadoc:aggregate
+mvn javadoc:aggregate-jar
+mvn javadoc:test-javadoc
+mvn javadoc:test-jar
+mvn javadoc:test-aggregate
+mvn javadoc:test-aggregate-jar
+```
+
+> https://maven.apache.org/plugins/maven-javadoc-plugin/usage.html
+
+### install
+
+> mvn install
+
+### deploy
+
+> https://jfrog.com/
+
+### surefile
+
+> mvn test
+
+> mvn install -Dmaven.test.skip=true
+
+TODO
+
+### eclipse
+
+> mvn eclipse:eclipse
+
+### war
+
+> mvn war:war
+
+
+
+## Create and structure maven projects
+
++ Understand the bennfits of archetypes
++ Create a custom archetype
++ Build a multi-module project
+
+> mvn archetype:create-from-project
+
+> bat target/generated-sources/archetype/src/main/resources/archetype-resources/pom.xml
+
+> cd target/generated-sources/archetype
+> mvn install
 
 

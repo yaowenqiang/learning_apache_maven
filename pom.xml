@@ -7,7 +7,11 @@
     <groupId>groupId</groupId>
     <artifactId>learning_apache_maven</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+    <modules>
+        <module>maven-examples</module>
+        <module>maven-parent</module>
+    </modules>
     <name>demo</name>
     <description>demo description</description>
     <url>https://python4.io</url>
