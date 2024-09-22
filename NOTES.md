@@ -347,6 +347,20 @@ mvn tomcat7:redeploy
 
 ```
 
+#### encrypt password
+
+```bash
+
+mvn -emp password
+
+touch ~/.m2/settings-security.xml
+
+mvn tomcat7:undeploy
+
+https://maven.apache.org/guides/mini/guide-encryption.html
+
+```
+
 ### debugging
 
 ```bash
