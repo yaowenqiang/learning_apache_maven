@@ -12,11 +12,13 @@
   <name>my-web-app Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+  <description>${env.PATH}</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+    <tomcat.url>http://localhost:8080/manager/text</tomcat.url>
   </properties>
 
   <dependencies>
@@ -29,9 +31,25 @@
   </dependencies>
 
   <build>
-    <finalName>my-web-app</finalName>
+        <finalName>my-web-app</finalName>
+<!--    <finalName>${project.artifactId}</finalName>-->
+<!--    <finalName>${project.artifactId}-${java.version}</finalName>-->
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat6-maven-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <url>${tomcat.url}</url>
+            <server>tomcat-server</server>
+          </configuration>
+        </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
@@ -68,7 +86,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.4.0</version>
         <configuration>
-          <warName>mavenweb</warName>
+          <warName>my-web-app</warName>
         </configuration>
 
       </plugin>

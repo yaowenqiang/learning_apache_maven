@@ -300,4 +300,66 @@ TODO
 > cd target/generated-sources/archetype
 > mvn install
 
+## Additional Features
+
++ Learn how to deploy a web application to a server
++ Discover how to encrypt credentials
++ use properties to make configuration dynamic
++ Uncover additional help and debugging
+
+### install tomcat
+
+```bash
+
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz
+
+tar zxvf apache-tomcat-9.0.95.tar.gz
+
+sudo mv apache-tomcat-9.0.95 /usr/local/
+cd /usr/local/apache-tomcat-9.0.95/
+./bin/startup.sh
+
+
+
+```
+
+> http://localhost:8080/
+
+### Add user to tomcat
+
+```bash
+vim /usr/local/apache-tomcat-9.0.95/conf/tomcat-users.xml
+
+add 
+
+<role rolename="manager-gui"/>
+<user username="tomcat" password="123456" roles="manager-gui"/>
+
+<role rolename="manager-script"/>
+<user username="admin" password="123456" roles="manager-gui"/>
+# stop and start tomcat 
+
+./bin/shutdown.sh
+./bin/startup.sh
+
+mvn tomcat7:deploy
+mvn tomcat7:redeploy
+
+```
+
+### debugging
+
+```bash
+
+mvn -help
+mvn compiler:help
+mvn -q compile
+mvn -x compile
+
+
+
+
+
+
+```
 
