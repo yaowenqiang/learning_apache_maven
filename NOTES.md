@@ -377,3 +377,21 @@ mvn -x compile
 
 ```
 
+
+## m2e plugin
+
+TODO
+
+## dependency plugin
+
+> mvn dependency:tree
+
+## add mvn auto completion
+
+> brew install zsh-completions 
+
+> chmod go-w '/opt/homebrew/share'
+
+> chmod -R go-w '/opt/homebrew/share/zsh'
+
+
